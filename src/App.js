@@ -126,11 +126,21 @@ class App extends Component {
                   <Card.Content header='Filters' />
                   <Card.Content >
                     <Item.Group>
-                    Major: <Dropdown name='majors' placeholder='major' search selection multiple options={this.state.majors} onChange={this.filterChanged} />
+                    Major: <Dropdown name='Majors' placeholder='major' search selection multiple options={this.state.majors} onChange={this.filterChanged} />
+                    </Item.Group>
+                    <Item.Group>
                     Degree: <Dropdown name='degree_levels' placeholder='Degree' search selection multiple options={this.state.degree} onChange={this.filterChanged} />
+                    </Item.Group>
+                    <Item.Group>
                     Interviewing: <Dropdown name='field_5' placeholder='Interviewing' search selection multiple options={this.state.interviewing} onChange={this.filterChanged} />
+                    </Item.Group>
+                    <Item.Group>
                     Location: <Dropdown name='field_3' placeholder='State' search selection multiple options={this.state.state} onChange={this.filterChanged} />
+                    </Item.Group>
+                    <Item.Group>
                     Sponsorships?: <Dropdown name='work_authorizations' placeholder='Sposorship' search selection multiple options={this.state.sponsorships} onChange={this.filterChanged} />
+                    </Item.Group>
+                    <Item.Group>
                     Position Type: <Dropdown name='position_types' placeholder='Position Type' search selection multiple options={this.state.positionType} onChange={this.filterChanged} />
                     </Item.Group>
                   </Card.Content>
