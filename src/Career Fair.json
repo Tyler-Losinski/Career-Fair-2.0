@@ -8987,16 +8987,6 @@
             "updated_at": ""
         },
         {
-            "app_id": 111493,
-            "field_name": "field_5",
-            "value": "Yes - later in the semester",
-            "parent": null,
-            "is_active": true,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": "2017-09-22T22:07:24Z"
-        },
-        {
             "app_id": 113467,
             "field_name": "field_5",
             "value": "Yes - the day after",
@@ -9025,16 +9015,6 @@
             "fair_id": 1168,
             "created_at": "",
             "updated_at": "2017-09-22T22:07:24Z"
-        },
-        {
-            "app_id": 111494,
-            "field_name": "majors",
-            "value": "Agricultural & BioSystems Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
         },
         {
             "app_id": 118378,
@@ -9087,16 +9067,6 @@
             "updated_at": "2017-09-22T22:07:24Z"
         },
         {
-            "app_id": 118380,
-            "field_name": "majors",
-            "value": "Computer Science Management Information Systems",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
-        },
-        {
             "app_id": 111499,
             "field_name": "majors",
             "value": "Construction Engineering",
@@ -9117,16 +9087,6 @@
             "updated_at": "2017-09-22T22:07:24Z"
         },
         {
-            "app_id": 118381,
-            "field_name": "majors",
-            "value": "Construction Management Electrical Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
-        },
-        {
             "app_id": 111501,
             "field_name": "majors",
             "value": "Electrical Engineering",
@@ -9135,16 +9095,6 @@
             "fair_id": 1168,
             "created_at": "",
             "updated_at": "2017-09-22T22:07:24Z"
-        },
-        {
-            "app_id": 118382,
-            "field_name": "majors",
-            "value": "Electrical Engineering Mechanical Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
         },
         {
             "app_id": 111502,
@@ -9187,26 +9137,6 @@
             "updated_at": "2017-09-22T22:07:24Z"
         },
         {
-            "app_id": 118383,
-            "field_name": "majors",
-            "value": "Industrial Engineering & Management Landscape Architecture Management Information Systems Manufacturing Engineering Mechanical Engineering Software Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
-        },
-        {
-            "app_id": 118385,
-            "field_name": "majors",
-            "value": "Industrial Engineering & Management Management Information Systems Manufacturing Engineering Mechanical Engineering Software Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
-        },
-        {
             "app_id": 118386,
             "field_name": "majors",
             "value": "Landscape",
@@ -9227,16 +9157,6 @@
             "updated_at": "2017-09-22T22:07:24Z"
         },
         {
-            "app_id": 118387,
-            "field_name": "majors",
-            "value": "Landscape Architecture Management Information Systems Manufacturing Engineering Mechanical Engineering Software Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
-        },
-        {
             "app_id": 111505,
             "field_name": "majors",
             "value": "Management Information Systems",
@@ -9255,26 +9175,6 @@
             "fair_id": 1168,
             "created_at": "",
             "updated_at": "2017-09-22T22:07:24Z"
-        },
-        {
-            "app_id": 118389,
-            "field_name": "majors",
-            "value": "Manufacturing Engineering Mechanical Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
-        },
-        {
-            "app_id": 118388,
-            "field_name": "majors",
-            "value": "Manufacturing Engineering Mechanical Engineering Software Engineering",
-            "parent": null,
-            "is_active": false,
-            "fair_id": 1168,
-            "created_at": "",
-            "updated_at": ""
         },
         {
             "app_id": 111507,
