@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Menu, Grid, Item, Image, Dropdown} from 'semantic-ui-react'
+import { Card, Menu, Grid, Item, Image, Dropdown, Header,Divider,Segment, Container} from 'semantic-ui-react'
 //import { Legend, PieChart } from 'react-easy-chart';
 import logo from './CF_Logo.png';
 import masterData from './Career Fair.json'
@@ -80,72 +80,80 @@ class App extends Component {
     const { activeItem } = this.state;
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Career Fair Info</h2>
-          <br />
-        </div>
-          <Grid relaxed columns={3} style={{ padding: 10 }}>
+        <Segment inverted >
+            <Header inverted color='grey' as='h2'>
+              <Image src={logo} alt="logo" style={{margin:10}}/>
+              Welcome to Career Fair Info
+              <br />
+            </Header>
+        </Segment>
+
+          <Grid stackable relaxed columns={3} style={{ padding: 10 }}>
             <Grid.Row>
               <Grid.Column width={3}>
-                <Menu inverted pointing vertical>
-                  <Menu.Item name='Companies' active={activeItem === 'Companies'} onClick={this.handleItemClick} />
-                  <Menu.Item name='Graphs' active={activeItem === 'Graphs'} onClick={this.handleItemClick} />
-                  <Menu.Item name='Most Wanted' active={activeItem === 'Most Wanted'} onClick={this.handleItemClick} />
-                </Menu>
+
+                <Grid.Row>
+                    <Menu inverted pointing vertical>
+                      <Menu.Item name='Companies' active={activeItem === 'Companies'} onClick={this.handleItemClick} />
+                      <Menu.Item name='Graphs' active={activeItem === 'Graphs'} onClick={this.handleItemClick} />
+                      <Menu.Item name='Most Wanted' active={activeItem === 'Most Wanted'} onClick={this.handleItemClick} />
+                    </Menu>
+
+                </Grid.Row>
+                <br/>
+
+                <Grid.Row width={5}>
+                    <Header as='h3' attached='top'> Filters </Header>
+                    <Segment attached>
+                        <Item.Group>
+                        Major: <Dropdown name='Majors' placeholder='major' search selection multiple options={this.state.majors} onChange={this.filterChanged} />
+                        </Item.Group>
+                        <Item.Group>
+                        Degree: <Dropdown name='degree_levels' placeholder='Degree' search selection multiple options={this.state.degree} onChange={this.filterChanged} />
+                        </Item.Group>
+                        <Item.Group>
+                        Interviewing: <Dropdown name='field_5' placeholder='Interviewing' search selection multiple options={this.state.interviewing} onChange={this.filterChanged} />
+                        </Item.Group>
+                        <Item.Group>
+                        Location: <Dropdown name='field_3' placeholder='State' search selection multiple options={this.state.state} onChange={this.filterChanged} />
+                        </Item.Group>
+                        <Item.Group>
+                        Sponsorships?: <Dropdown name='work_authorizations' placeholder='Sposorship' search selection multiple options={this.state.sponsorships} onChange={this.filterChanged} />
+                        </Item.Group>
+                        <Item.Group>
+                        Position Type: <Dropdown name='position_types' placeholder='Position Type' search selection multiple options={this.state.positionType} onChange={this.filterChanged} />
+                        </Item.Group>
+                    </Segment>
+              </Grid.Row>
               </Grid.Column>
+
               <Grid.Column width={8}>
-                <Card fluid>
-                  <Card.Content header='Companies' extra={this.state.companies.length}/>
-                  <Card.Content >
-                    <Item.Group>
-                      {
-                        this.state.companies.map((data) => {
-                          return (
-                            <Item>
-                              <Item.Image size='tiny' src={data.logo.url} />
+                    <Header as='h2' attached='top'> Companies </Header>
+                    {/*<Card.Content header='Companies' extra={this.state.companies.length}/>*/}
+                    <Segment attached>
+                        <Item.Group>
+                          {
+                            this.state.companies.map((data) => {
+                              return (
+                                <Item>
+                                  <Item.Image size='tiny' src={data.logo.url} />
 
-                              <Item.Content>
-                                <Item.Header as='a'>{data.name}</Item.Header>
-                                <Item.Meta>Jobs: {data.jobs}</Item.Meta>
-                                <Item.Description>
-                                  Description: {data.description}
-                                </Item.Description>
-                                <Item.Extra>Majors: {data.majors}</Item.Extra>
-                              </Item.Content>
-                            </Item>)
-                        })
-                      }
-                    </Item.Group>
-
-                  </Card.Content>
-                </Card>
+                                  <Item.Content>
+                                    <Item.Header as='a'>{data.name}</Item.Header>
+                                    <Item.Meta>Jobs: {data.jobs}</Item.Meta>
+                                    <Item.Description>
+                                      Description: {data.description}
+                                    </Item.Description>
+                                    <Item.Extra>Majors: {data.majors} <Divider/></Item.Extra>
+                                  </Item.Content>
+                                </Item>)
+                            })
+                          }
+                        </Item.Group>
+                    </Segment>
+   
               </Grid.Column>
-              <Grid.Column width={5}>
-                <Card fluid>
-                  <Card.Content header='Filters' />
-                  <Card.Content >
-                    <Item.Group>
-                    Major: <Dropdown name='Majors' placeholder='major' search selection multiple options={this.state.majors} onChange={this.filterChanged} />
-                    </Item.Group>
-                    <Item.Group>
-                    Degree: <Dropdown name='degree_levels' placeholder='Degree' search selection multiple options={this.state.degree} onChange={this.filterChanged} />
-                    </Item.Group>
-                    <Item.Group>
-                    Interviewing: <Dropdown name='field_5' placeholder='Interviewing' search selection multiple options={this.state.interviewing} onChange={this.filterChanged} />
-                    </Item.Group>
-                    <Item.Group>
-                    Location: <Dropdown name='field_3' placeholder='State' search selection multiple options={this.state.state} onChange={this.filterChanged} />
-                    </Item.Group>
-                    <Item.Group>
-                    Sponsorships?: <Dropdown name='work_authorizations' placeholder='Sposorship' search selection multiple options={this.state.sponsorships} onChange={this.filterChanged} />
-                    </Item.Group>
-                    <Item.Group>
-                    Position Type: <Dropdown name='position_types' placeholder='Position Type' search selection multiple options={this.state.positionType} onChange={this.filterChanged} />
-                    </Item.Group>
-                  </Card.Content>
-                </Card>
-              </Grid.Column>
+              
             </Grid.Row>
           </Grid>
       </div>
